@@ -55,7 +55,8 @@ dependencies {
     }
 
     // Create's own required deps needed at compile time
-    compileOnly("com.jozufozu.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}") {
+    // Flywheel group changed to dev.engine-room.flywheel in Create 6.x
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-${minecraft_version}:${flywheel_version}") {
         transitive = false
     }
     compileOnly("com.tterrag.registrate:Registrate:${registrate_version}") {
