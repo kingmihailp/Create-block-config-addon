@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.example.createblocklimit.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "refmap": "createblocklimit.refmap.json",
+  "mixins": [
+    "AbstractContraptionMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "createblocklimit.assembly.too_many": "Too many %s in contraption: %d (max %d allowed)",
+  "createblocklimit.assembly.too_few": "Not enough %s in contraption: %d (min %d required)"
+}

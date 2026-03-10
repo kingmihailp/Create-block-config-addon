@@ -1,0 +1,4 @@
+{
+  "createblocklimit.assembly.too_many": "Слишком много блоков \"%s\" в сборной штуковине: %d (максимум: %d)",
+  "createblocklimit.assembly.too_few": "Недостаточно блоков \"%s\" в сборной штуковине: %d (минимум: %d)"
+}
