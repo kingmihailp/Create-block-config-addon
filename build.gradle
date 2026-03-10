@@ -26,18 +26,21 @@ runs {
 
 // ─── Repositories ────────────────────────────────────────────────────────────
 repositories {
-    // Create mod and its dependencies
+    // Official Create mod Maven — hosts Create 6.x and Flywheel for 1.21.1
+    maven {
+        name = 'createmod maven'
+        url = 'https://maven.createmod.net'
+    }
+    // tterrag Maven — Registrate + older Create/Flywheel builds
     maven {
         name = 'tterrag maven'
         url = 'https://maven.tterrag.com/'
     }
-    // Flywheel snapshots / Registrate snapshots
+    // Fallback snapshots
     maven {
         name = 'devos.one snapshots'
         url = 'https://mvn.devos.one/snapshots/'
     }
-    // Fallback: CurseMaven (uncomment if tterrag maven is unavailable)
-    // maven { url = 'https://cursemaven.com' }
     mavenCentral()
 }
 
