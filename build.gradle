@@ -74,6 +74,9 @@ jar {
             'Implementation-Title'    : project.name,
             'Implementation-Version'  : project.jar.archiveVersion,
             'Implementation-Vendor'   : mod_authors,
+            // Required: tells the Mixin system which config file(s) to load.
+            // Without this attribute the Mixin is silently ignored at runtime.
+            'MixinConfigs'            : "${mod_id}.mixins.json",
         ])
     }
 }
