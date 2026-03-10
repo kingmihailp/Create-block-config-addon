@@ -96,15 +96,18 @@ public abstract class ContraptionMixin {
         List<String> violations = new ArrayList<>();
 
         for (BlockLimitEntry entry : limits) {
-            Block block = BuiltInRegistries.BLOCK.get(
+            // Use getOptional — get() returns Blocks.AIR for unknown IDs,
+            // which would cause a false "Not enough Air" violation.
+            var optBlock = BuiltInRegistries.BLOCK.getOptional(
                     net.minecraft.resources.ResourceLocation.parse(entry.blockId()));
 
-            if (block == null) {
+            if (optBlock.isEmpty()) {
                 CreateBlockLimitAddon.LOGGER.warn(
                         "[CreateBlockLimit] Unknown block in config: \"{}\" — skipping.",
                         entry.blockId());
                 continue;
             }
+            Block block = optBlock.get();
 
             int count = blockCounts.getOrDefault(entry.blockId(), 0);
 

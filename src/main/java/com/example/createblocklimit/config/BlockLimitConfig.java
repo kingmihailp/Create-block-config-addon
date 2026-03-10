@@ -32,7 +32,7 @@ import java.util.List;
  * <pre>
  * blockLimits = [
  *   "create:mechanical_bearing:1:1",   # exactly 1 bearing required
- *   "create:drill:0:4",                 # at most 4 drills
+ *   "create:mechanical_drill:0:4",       # at most 4 drills
  *   "minecraft:tnt:-1:0",               # TNT is completely forbidden
  *   "create:rope_pulley:1:-1",          # at least 1 rope pulley required
  * ]
@@ -62,7 +62,7 @@ public final class BlockLimitConfig {
                 "",
                 "Examples:",
                 "  \"create:mechanical_bearing:1:1\"  -> exactly 1 bearing",
-                "  \"create:drill:0:4\"               -> at most 4 drills",
+                "  \"create:mechanical_drill:0:4\"     -> at most 4 drills",
                 "  \"minecraft:tnt:-1:0\"             -> TNT forbidden",
                 "  \"create:rope_pulley:1:-1\"        -> at least 1 rope pulley"
         );
